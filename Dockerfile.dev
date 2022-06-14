@@ -13,4 +13,4 @@ COPY .env ./
 
 EXPOSE ${PORT}
 
-CMD ["npm", "run", "import:all", "npm", "run", "start:watch"]
+CMD ["npm", "run", "start:watch"]

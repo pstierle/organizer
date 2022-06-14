@@ -12,6 +12,6 @@ router.get("/universities", universityController.index);
 
 router.put("/subject", subjectController.store);
 router.get("/subject/:id", subjectController.index);
-router.get("/subject", subjectController.show);
+router.get("/subjects", subjectController.show);
 router.delete("/subject/:id", subjectController.destroy);
 router.put("/subject/:id", subjectController.update);
