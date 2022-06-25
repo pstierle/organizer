@@ -13,12 +13,14 @@ export const User = database.define(
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
+
       validate: {
         len: [3, 8],
       },
     },
     email: {
       type: DataTypes.STRING,
+      unique: true,
     },
     password: {
       type: DataTypes.STRING,

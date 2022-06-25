@@ -5,8 +5,9 @@ import * as subjectController from "../controllers/subject";
 
 export const router = Router();
 
-router.post("/login", userController.login);
-router.post("/register", userController.register);
+router.post("/user", userController.register);
+router.get("/user", userController.login);
+router.put("/user", userController.update);
 
 router.get("/universities", universityController.index);
 

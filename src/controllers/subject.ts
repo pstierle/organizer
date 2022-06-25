@@ -27,4 +27,15 @@ export const destroy = async (req: Request, res: Response): Promise<void> => {
     res.status(404).json("Das Fach existiert nicht.");
   }
 };
-export const update = async (req: Request, res: Response): Promise<void> => {};
+export const update = async (req: Request, res: Response): Promise<void> => {
+  Subject.update(
+    {
+      ...req.body,
+    },
+    {
+      where: {
+        id: req.body.id,
+      },
+    }
+  );
+};
