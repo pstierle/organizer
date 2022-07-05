@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import { database } from "../database/connection";
+import { User } from "./User";
 
 export const Subject = database.define(
   "Subject",
@@ -11,7 +12,7 @@ export const Subject = database.define(
     },
     semester: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
     },
     professor: {
       type: DataTypes.STRING,

@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import { database } from "../database/connection";
+import { Subject } from "./Subject";
 
 export const User = database.define(
   "User",
@@ -33,3 +34,6 @@ export const User = database.define(
     timestamps: true,
   }
 );
+
+User.hasMany(Subject, { as: "subjects", foreignKey: "user_id" });
+Subject.belongsTo(User, { as: "user", foreignKey: "user_id" });
